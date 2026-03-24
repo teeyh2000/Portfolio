@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FiLinkedin, FiMail, FiExternalLink, FiMenu, FiX, FiArrowUp, FiSun, FiMoon } from 'react-icons/fi';
+import { FiLinkedin, FiMail, FiExternalLink, FiMenu, FiX, FiArrowUp, FiSun, FiMoon, FiDownload } from 'react-icons/fi';
 import { personalInfo, skills, experience, projects, achievements, education } from './data/portfolio';
 import './App.css';
 
@@ -123,6 +123,9 @@ function Navbar({ theme, onToggleTheme }: { theme: string; onToggleTheme: () => 
               </li>
             ))}
           </ul>
+          <a href="/Portfolio/Resume_TeeYungHow.pdf" download="Resume_TeeYungHow.pdf" className="nav-resume-btn">
+            <FiDownload /> Resume
+          </a>
           <button className="theme-toggle" onClick={onToggleTheme} aria-label="Toggle theme">
             {theme === 'light' ? <FiMoon /> : <FiSun />}
           </button>
@@ -201,6 +204,9 @@ function Hero() {
             </a>
             <a href={personalInfo.linkedin} target="_blank" rel="noopener noreferrer" className="btn btn-outline">
               <FiLinkedin /> LinkedIn
+            </a>
+            <a href="/Portfolio/Resume_TeeYungHow.pdf" download="Resume_TeeYungHow.pdf" className="btn btn-outline">
+              <FiDownload /> Resume
             </a>
           </motion.div>
           <motion.div className="hero-stats" variants={fadeUp}>
