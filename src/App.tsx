@@ -250,8 +250,8 @@ function About() {
                 with strong expertise in database design, Azure cloud deployment, and system integrations.
               </p>
               <p>
-                At Syntrino Solutions (SwiF Fintech), I've been the top contributor delivering features and fixes at scale. My work spans payment gateway integrations (ShopeePay, Touch 'n Go, Maybank, Boost),
-                LHDN e-invoicing systems, and full-stack web applications.
+                At SwiF Fintech (formerly Syntrino Solutions), I've been the top contributor delivering features and fixes at scale. My work spans the Vibe Mobile telco customer app backend, payment gateway
+                integrations (ShopeePay, Touch 'n Go, Maybank, Boost), LHDN e-invoicing systems, and full-stack web applications.
               </p>
               <p>
                 Previously at UOB Kay Hian, I maintained critical securities trading systems, resolved security
@@ -375,7 +375,7 @@ function Projects() {
           <div className="projects-grid">
             {projects.map((proj, i) => (
               <motion.div key={i} className="project-card" variants={fadeUp} custom={i}>
-                <div className="project-number">{'0' + (i + 1)}</div>
+                <div className="project-number">{String(i + 1).padStart(2, '0')}</div>
                 <div className="project-header">
                   <h3 className="project-title">{proj.title}</h3>
                   {(proj as { github?: string }).github && (

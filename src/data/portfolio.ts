@@ -33,17 +33,18 @@ export const skills = [
 
 export const experience = [
   {
-    company: "Syntrino Solutions Sdn. Bhd.",
+    company: "SwiF Fintech Sdn. Bhd. (formerly Syntrino Solutions)",
     role: "Software Developer",
     period: "Sep 2024 - Present",
     highlights: [
-      "Top contributor — completed 55 tasks across 7 months",
-      "Integrated 6 payment gateways: ShopeePay, Touch 'n Go, Maybank MGate, Boost-Sparkle, PayDibs, Funding Society",
-      "Architected end-to-end LHDN e-invoicing system across 4 Syntrino products",
+      "Sole backend developer for the Vibe Mobile customer app — designed the database structure and built extensive integrations through its first production release",
+      "Engaged directly with stakeholders and attended physical MCMC meetings to ensure telco regulatory guideline adherence",
       "Single-handedly built the Porsche Club Malaysia admin web application",
+      "Top contributor — completed 55 tasks across 7 months",
+      "Integrated 7 payment gateways: ShopeePay, Touch 'n Go, Maybank MGate, Boost-Sparkle, Boost Connect, PayDibs, Funding Society",
+      "Architected end-to-end LHDN e-invoicing system across 4 Syntrino products",
       "Managed Azure deployments, centralized logging, and database design",
       "Resolved 12 production bugs and authored 14 integration test cases",
-      "Fostered team collaboration through frequent discussions and code reviews",
       "Documented all work via Jira task tracking and maintained changelogs in Confluence for every release",
     ],
   },
@@ -74,6 +75,19 @@ export const experience = [
 ];
 
 export const projects = [
+  {
+    title: "Vibe Mobile - Customer App Backend",
+    description:
+      "Backend powering the Vibe Mobile customer app for a Malaysian prepaid 5G telco — built almost single-handedly from the ground up, covering SIM registration, eKYC, payments, and telco BSS provisioning through its first production release.",
+    tech: ["C#", ".NET 10", "EF Core", "SQL Server", "Redis", "AWS ECS", "Terraform"],
+    highlights: [
+      "Sole backend developer — Clean Architecture + CQRS design with 75+ REST endpoints and 550+ automated tests",
+      "Built the full SIM onboarding funnel: eSIM & physical SIM registration, Zoloz/MyDigital eKYC, number selection, and async BSS fulfillment",
+      "Integrated 10+ external services: ZTE ZSmart BSS, SwifPay payments, FCM & Huawei push, SMPP OTP, Brevo email, AWS S3",
+      "Delivered plan purchases, top-up & PIN redemption, data sharing, roaming passes, loyalty, and an in-app notification inbox",
+      "Provisioned AWS ECS Fargate infrastructure with Terraform, plus OpenTelemetry tracing to Grafana, Hangfire jobs, and a transactional outbox for reliability",
+    ],
+  },
   {
     title: "SwifPay - Payment Gateway",
     description:
